@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-image: linear-gradient(to right, #37ecba 0%, #72afd3 100%);
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height: 100hv;
+    background-size: cover;
+    background: transparent;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    width: 140px;
+    cursor: pointer;
+    margin: 15px ;
+}
+.navbar {
+    list-style-type: none;
+    margin: 0 20px;
+    padding: 0;
+    display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navbar a{
+    color: rgb(12, 10, 32);
+    text-decoration: none;
+    text-transform: initial;
+    border-radius: 5px;
+    border-bottom: 1.5px solid;
+    margin-left: 50px;
+}
+.navbar a:hover{
+    color: #4abeb2;
+    background-color: #23504b;
+}
+
+
+#menu-icon{
+    font-size: 1.8rem;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    background: var(--hover-color);
+    border-radius: 3px;
+    display: none;
+}
+
+
+@keyframes slidebg {
+    to {
+        background-position: 20vw;
+    }
+}
+/* General Section Padding */
+hr {
+    height: 2px;
+    background-color: #7bd3dd;
+    margin: 20px 0;
+}
+/* General Section Padding */
+section {
+    padding: 85px 9%;
+}
+
+/* Home Page */
+.about-page {
+    display: flex;
+    align-items: center;
+    justify-content: relative;
+    padding: 110px 10% 0;
+    background: url('image/home.svg') no-repeat;
+    background-size: 500px auto;
+    background-position: right center;
+    height: 100vh;
+    width: 100%;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-content h1 span {
+    color: rgb(7, 59, 63);
+}
+
+.about-content h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+.about-content p {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out 1s;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(21, 79, 83);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.social-icons a:hover {
+    background: rgb(11, 47, 49);
+    color: #000;
+    box-shadow: 0 0 20px rgb(14, 51, 54);
+}
+/* LinkedIn */
+.bxl-linkedin-square {
+    color: #0077b5;
+    /* LinkedIn color */
+}
+
+/* TikTok */
+.bxl-tiktok {
+color: white;
+text-shadow: -1px 0 2px rgb(98, 98, 230), 1px 0 2px rgb(56, 8, 8);
+    /* TikTok color */
+}
+
+/* Instagram */
+.bxl-instagram {
+    color: #bc2a8d;
+    /* Instagram color */
+}
+
+/* Telegram */
+.bxl-telegram {
+    color: #0088cc;
+    /* Telegram color */
+}
+
+/* GitHub */
+.bxl-github {
+    color: #fff;
+    /* GitHub color */
+}
+
+/* Button Box */
+.btn-box {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.CV {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(24, 75, 79);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #03050b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.CV:hover {
+    background: #00c2c7;
+    box-shadow: 0 0 20px #0ef;
+}
+
+/* Text Animation */
+.text-animation {
+    font-size: 24px;
+    font-weight: 600;
+    min-width: 280px;
+    display: inline-block;
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "Web Developer";
+    color: rgb(6, 82, 60);
+    animation: words 10s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: none;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid rgb(6, 40, 42);
+    right: -8px;
+    animation: cursor 0.1s infinite, typing 3s steps(3) initially infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid transparent;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "Web Developer";
+    }
+
+    21%,
+    40% {
+        content: "Frontend Designer";
+    }
+
+    41%,
+    60% {
+        content: "Mechanical Designer";
+    }
+
+    61%,
+    80% {
+        content: "Data Analyst";
+    }
+
+    81%,
+    100% {
+        content: "Software Tester";
+    }
+}
+
+@keyframes typing {
+
+    0%,
+    100% {
+        width: 0;
+    }
+
+    50% {
+        width: calc(100% + 8px);
+    }
+}
+
+/* SVG Image */
+.img-box {
+    flex: 1;
+    text-align: center;
+}
+
+.SVG-img {
+    max-height: 80vh;
+    animation: fadeIn 1s ease-in-out 1.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+.skills {
+    padding: 60px 0;
+    text-align: center;
+    background-image: linear-gradient(to right, #37ecba 0%, #72afd3 100%);
+}
+
+.skills h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    justify-items: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.skill h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    background: #3dc7b0;
+    box-shadow: 0 0 20px rgba(36, 141, 120, 0.3);
+}
+
+.skill:hover i {
+    color: #8fd5e7;
+    /* Change to any color you prefer */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add individual colors for each icon */
+.bxl-html5 {
+    color: #e34c26;
+}
+
+.bxl-css3 {
+    color: #1572b6;
+}
+
+.bxl-javascript {
+    color: #f7df1e;
+}
+
+.bxl-react {
+    color: #973bcc;
+}
+
+.bxl-python {
+    color: #3776ab;
+}
+
+.fa-cube {
+    color: #ff6347;
+}
+
+.fa-drafting-compass {
+    color: #00bfff;
+}
+
+.fa-wrench {
+    color: #ff8c00;
+}
+
+.portfolio {
+    padding: 60px 0;
+    text-align: center;
+    background-image: linear-gradient(to right, #37ecba 0%, #72afd3 100%);
+}
+
+.portfolio h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+    color: #060505;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 450px;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item:hover .portfolio-info {
+    transform: translateY(0);
+}
+
+.portfolio-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.portfolio-info p {
+    margin: 5px 0 0;
+    color: #00c2c7;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-section {
+    padding: 50px 0;
+    background: linear-gradient(to right, #37ecba, #72afd3);
+    text-align: center;
+    color: #0c0b0b;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-left h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    color: #0c0b0b;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.socials i {
+    margin-right: 10px;
+    color: #0c0b0b;
+}
+.hire-me-button {
+    background: rgb(4, 21, 22);
+    color:#abe7f1;
+}
+
+.hire-me-button:hover {
+    background: #0a8155;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    transition: box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    outline: none;
+}
+
+.form-group textarea::placeholder {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background: rgb(4, 21, 22);
+    color: #abe7f1;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #21068d;
+    transform: scale(1.05);
+}
